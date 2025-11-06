@@ -1,0 +1,235 @@
+
+
+#root {
+  margin: 0 auto;
+  /* padding: 1rem; */
+  max-width: 1280;
+  text-align: center;
+  background-color: #F6F7F8;
+}
+
+body {
+  background-color: #F6F7F8;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+a.active {
+  background-color: skyblue;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 400px;
+  height: 100%;
+  background-color: #F6F7F8;
+  color: black;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none; 
+}
+
+@media only screen and (max-width: 375px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 377px;
+    height: 100%;
+    background-color: #F6F7F8;
+    color: black;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none; 
+  }
+  .sidebar.open {
+    right: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+}
+
+.sidebar.open {
+  right: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;               /* responsive width */
+  max-width: 1000px;         /* cap on large screens */
+  height: auto;              /* let content define height */
+  max-height: 90vh;          /* prevent overflow */
+  overflow-y: auto;          /* scroll inside if too tall */
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* When opened */
+.menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Initial scale-down for smooth animation */
+.menu {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Tablet (≈ medium screens) */
+@media (max-width: 1024px) {
+  .menu {
+    width: 80vw;
+    max-width: 700px;
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile (≈ small screens) */
+@media (max-width: 768px) {
+  .menu {
+    width: 95vw;
+    height: auto;
+    max-height: 85vh;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+}
+
+/* Very small mobile (e.g., iPhone SE) */
+@media (max-width: 400px) {
+  .menu {
+    width: 95vw;
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+}
+
+
+
+
+button:disabled {
+  background-color: #d1d5db; /* gray-300 */
+  color: #6b7280;           /* gray-500 */
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.ProseMirror ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+.ProseMirror ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+.ProseMirror li {
+  margin-bottom: 0.25rem;
+}
+
+.rdp-root {
+  
+  --rdp-day-font-size: 1rem;
+  --rdp-spacing: 2px; 
+  --rdp-weekday-gap: 2px; 
+  --rdp-day_button-width: 85px;
+  --rdp-day_button-height: 40px;
+}
+
+.availableDay {
+  --rdp-day_button-width: 50px;
+  --rdp-day_button-height: 40px;
+}
+
+@media (max-width: 1024px) {
+  .availableDay {
+    --rdp-day_button-width: 30px;
+    --rdp-day_button-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rdp-root {
+    --rdp-day_button-width: 50px;
+    --rdp-day_button-height: 60px;
+    --rdp-day-font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .rdp-root {
+    --rdp-day_button-width: 28px;
+    --rdp-day_button-height: 28px;
+    --rdp-day-font-size: 0.75rem;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
