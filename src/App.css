@@ -104,11 +104,11 @@ a.active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vw;               /* responsive width */
-  max-width: 1000px;         /* cap on large screens */
-  height: auto;              /* let content define height */
-  max-height: 90vh;          /* prevent overflow */
-  overflow-y: auto;          /* scroll inside if too tall */
+  width: 90vw;              
+  max-width: 1000px;       
+  height: auto;              
+  max-height: 90vh;          
+  overflow-y: auto;          
   background-color: white;
   color: black;
   padding: 2rem;
@@ -165,8 +165,8 @@ a.active {
 
 
 button:disabled {
-  background-color: #d1d5db; /* gray-300 */
-  color: #6b7280;           /* gray-500 */
+  background-color: #d1d5db; 
+  color: #6b7280;           
   cursor: not-allowed;
   opacity: 0.8;
 }
@@ -228,8 +228,8 @@ button:disabled {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge, and Firefox */
+
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
 }
